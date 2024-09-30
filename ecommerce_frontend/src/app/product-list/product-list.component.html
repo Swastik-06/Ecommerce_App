@@ -1,0 +1,16 @@
+<!-- <p *ngFor="let tempProduct of products">
+    {{tempProduct.name }} :: {{tempProduct.unitPrice}}
+</p> -->
+
+<table>
+    <tr>
+        <td>Name</td>
+        <td>Price</td>
+        <td>Image</td>
+    </tr>
+    <tr *ngFor="let tempProduct of products">
+        <td>{{tempProduct.name}}</td>
+        <td>{{tempProduct.unitPrice}}</td>
+        <td><img src={{tempProduct.imageUrl}} alt="" height="100px" width="100px" /></td>
+    </tr>
+</table>
