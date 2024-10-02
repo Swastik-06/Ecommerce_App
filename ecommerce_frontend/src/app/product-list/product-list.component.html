@@ -1,16 +1,19 @@
-<!-- <p *ngFor="let tempProduct of products">
-    {{tempProduct.name }} :: {{tempProduct.unitPrice}}
-</p> -->
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        <div class="row">
+             <!-- loop over the collection of products -->
+        <div *ngFor="let tempProduct of products" class="col-md-3">
 
-<table>
-    <tr>
-        <td>Name</td>
-        <td>Price</td>
-        <td>Image</td>
-    </tr>
-    <tr *ngFor="let tempProduct of products">
-        <td>{{tempProduct.name}}</td>
-        <td>{{tempProduct.unitPrice}}</td>
-        <td><img src={{tempProduct.imageUrl}} alt="" height="100px" width="100px" /></td>
-    </tr>
-</table>
+            <div class="product-box">
+                <img src="{{ tempProduct.imageUrl }}" class="img-responsive">
+                <h1>{{ tempProduct.name }}</h1>
+                <div class="price">{{ tempProduct.unitPrice }}</div>
+                <a href="#" class="primary-btn">Add to cart</a>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div *ngIf="products.length==0" class="alert alert-warning col-md-12">
+        No Records Found
+    </div>
+</div>
